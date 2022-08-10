@@ -706,7 +706,7 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
+                    <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="958" height="540"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -721,10 +721,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMo-rG-aXp">
-                                <rect key="frame" x="53" y="499" width="125" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="pQV-e8-6rX"/>
-                                </constraints>
+                                <rect key="frame" x="53" y="499" width="130" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Browse for Folder" usesSingleLineMode="YES" bezelStyle="round" id="vee-sN-77a">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -796,7 +793,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="xe9-JW-Lho">
-                                    <rect key="frame" x="1" y="443" width="150" height="15"/>
+                                    <rect key="frame" x="1" y="443" width="161" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="bvL-xv-bjQ">
@@ -814,9 +811,11 @@
                             <constraint firstItem="xMo-rG-aXp" firstAttribute="leading" secondItem="1Zf-OJ-Vgy" secondAttribute="trailing" constant="5" id="lhs-AJ-kAN"/>
                             <constraint firstItem="1Zf-OJ-Vgy" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="qFh-NJ-jus"/>
                             <constraint firstAttribute="bottom" secondItem="KcT-0E-T8q" secondAttribute="bottom" constant="20" symbolic="YES" id="sTm-vh-omf"/>
+                            <constraint firstItem="xMo-rG-aXp" firstAttribute="trailing" secondItem="KcT-0E-T8q" secondAttribute="trailing" id="wJ7-rV-OQV"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="_btnFolderUp" destination="1Zf-OJ-Vgy" id="j1c-14-IyX"/>
                         <outlet property="_tableFile" destination="Ngn-Ad-ert" id="nN6-Xn-S6x"/>
                         <outlet property="_txtFolderPath" destination="xMo-rG-aXp" id="Ekl-kf-BtC"/>
                     </connections>

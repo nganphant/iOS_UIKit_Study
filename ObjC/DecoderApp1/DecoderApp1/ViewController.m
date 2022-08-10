@@ -14,6 +14,7 @@
     
     __weak IBOutlet NSTableView *_tableFile;
     __weak IBOutlet NSTextField *_txtFolderPath;
+    __weak IBOutlet NSButton *_btnFolderUp;
     
     FolderHelper* _folderHelper;
 }
@@ -56,6 +57,7 @@
 }
 
 #pragma mark - UI EVENT
+
 -(void)txtFolder_Click:(id)sender{
     FUNC_LOG();
     
@@ -73,18 +75,7 @@
         
         if (result != nil) {
             // /Users/ourcodeworld/Desktop/ABC/
-            NSString* path = result.path;
-            NSLog(@"User picked folder: %@", path);
-            
-            _txtFolderPath.stringValue = path;
-            [[_txtFolderPath currentEditor] moveToEndOfLine:nil];
-            
-            _folderHelper = [[FolderHelper alloc]initWithFolderPath:result];
-            
-            NSLog(@"START RELOAD");
-            [_tableFile reloadData];
-            NSLog(@"END RELOAD");
-            [self autoResizeColumn];
+            [self openFolder:result];
             
         }
         
@@ -93,9 +84,46 @@
 
 - (IBAction)btnGoUp_Click:(id)sender {
     FUNC_LOG();
+    
+    // did not select folder yet
+    if (_folderHelper==nil) {
+        return;
+    }
+    
+    NSFileManager* fm = NSFileManager.defaultManager;
+    NSString* curFolder = _folderHelper.folderPath.path;
+    NSString* parentFolder = [curFolder stringByDeletingLastPathComponent];
+    
+    // no parent?
+    if (parentFolder==nil||parentFolder.length==0) {
+        return;
+    }
+    
+    // can not find parent folder?
+    if (![fm fileExistsAtPath:parentFolder]) {
+        return;
+    }
+    
+    [self openFolder:[[NSURL alloc]initFileURLWithPath:parentFolder]];
 }
 
 #pragma mark - HELPER FUNC
+- (void)openFolder:(NSURL *)result {
+    
+    NSString* path = result.path;
+    NSLog(@"open folder: %@", path);
+    
+    _txtFolderPath.stringValue = path;
+    [[_txtFolderPath currentEditor] moveToEndOfLine:nil];
+    
+    _folderHelper = [[FolderHelper alloc]initWithFolderPath:result];
+    
+    NSLog(@"START RELOAD");
+    [_tableFile reloadData];
+    NSLog(@"END RELOAD");
+    [self autoResizeColumn];
+}
+
 - (void)autoResizeColumn {
     NSTableView * tableView = _tableFile;
     NSInteger columnIndex = 0;

@@ -29,7 +29,12 @@
     
     NSDirectoryEnumerator<NSURL *> * files = [fm enumeratorAtURL:self.folderPath includingPropertiesForKeys:resourceKey
                 options:NSDirectoryEnumerationSkipsHiddenFiles | NSDirectoryEnumerationSkipsPackageDescendants | NSDirectoryEnumerationSkipsSubdirectoryDescendants
-           errorHandler:nil];
+                                                    errorHandler:^BOOL(NSURL * _Nonnull url, NSError * _Nonnull error) {
+        if (error!=nil) {
+            NSLog(@"eeee");
+        }
+        return YES;
+    }];
     
     for (NSURL* file in files) {
         
