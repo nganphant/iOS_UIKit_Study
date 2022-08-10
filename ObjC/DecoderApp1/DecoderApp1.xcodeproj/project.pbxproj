@@ -14,6 +14,8 @@
 		4B27483028A27E9C00FE417A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B27482F28A27E9C00FE417A /* main.m */; };
 		4B27483928A2815300FE417A /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B27483828A2815300FE417A /* WindowController.m */; };
 		4B27483C28A287D700FE417A /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B27483B28A287D700FE417A /* Utility.m */; };
+		4B5B00F928A356DB00DE0C0B /* FileListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B00F828A356DB00DE0C0B /* FileListCell.m */; };
+		4B5B00FF28A36DF300DE0C0B /* FolderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B00FE28A36DF300DE0C0B /* FolderHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,10 @@
 		4B27483828A2815300FE417A /* WindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
 		4B27483A28A287D700FE417A /* Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		4B27483B28A287D700FE417A /* Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		4B5B00F728A356DB00DE0C0B /* FileListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileListCell.h; sourceTree = "<group>"; };
+		4B5B00F828A356DB00DE0C0B /* FileListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileListCell.m; sourceTree = "<group>"; };
+		4B5B00FD28A36DF300DE0C0B /* FolderHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FolderHelper.h; sourceTree = "<group>"; };
+		4B5B00FE28A36DF300DE0C0B /* FolderHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FolderHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		4B27482328A27E9A00FE417A /* DecoderApp1 */ = {
 			isa = PBXGroup;
 			children = (
+				4B5B00F628A3568F00DE0C0B /* FileList */,
 				4B27482428A27E9A00FE417A /* AppDelegate.h */,
 				4B27482528A27E9A00FE417A /* AppDelegate.m */,
 				4B27482728A27E9A00FE417A /* ViewController.h */,
@@ -76,6 +83,17 @@
 				4B27483B28A287D700FE417A /* Utility.m */,
 			);
 			path = DecoderApp1;
+			sourceTree = "<group>";
+		};
+		4B5B00F628A3568F00DE0C0B /* FileList */ = {
+			isa = PBXGroup;
+			children = (
+				4B5B00F728A356DB00DE0C0B /* FileListCell.h */,
+				4B5B00F828A356DB00DE0C0B /* FileListCell.m */,
+				4B5B00FD28A36DF300DE0C0B /* FolderHelper.h */,
+				4B5B00FE28A36DF300DE0C0B /* FolderHelper.m */,
+			);
+			path = FileList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +170,8 @@
 				4B27483C28A287D700FE417A /* Utility.m in Sources */,
 				4B27483028A27E9C00FE417A /* main.m in Sources */,
 				4B27482628A27E9A00FE417A /* AppDelegate.m in Sources */,
+				4B5B00FF28A36DF300DE0C0B /* FolderHelper.m in Sources */,
+				4B5B00F928A356DB00DE0C0B /* FileListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +317,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ngan.study.com.DecoderApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -323,6 +344,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ngan.study.com.DecoderApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";

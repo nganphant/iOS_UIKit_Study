@@ -94,15 +94,15 @@ NS_ASSUME_NONNULL_BEGIN
 // CGRect
 //////////////////////////////////////////////////////////////////
 
-#define SetX(v, x)               v.frame = CGRectMake(x, v.frame.origin.y, v.frame.size.width, v.frame.size.height)
-#define SetY(v, y)               v.frame = CGRectMake(v.frame.origin.x, y, v.frame.size.width, v.frame.size.height)
-#define SetWidth(v, w)           v.frame = CGRectMake(v.frame.origin.x, v.frame.origin.y, w, v.frame.size.height)
-#define SetHeight(v, h)          v.frame = CGRectMake(v.frame.origin.x, v.frame.origin.y, v.frame.size.width, h)
-#define SetOrigin(v, x, y)       v.frame = CGRectMake(x, y, v.frame.size.width, v.frame.size.height)
-#define SetSize(v, w, h)         v.frame = CGRectMake(v.frame.origin.x, v.frame.origin.y, w, h)
-#define SetFrame(v, x, y, w, h)  v.frame = CGRectMake(x, y, w, h)
-#define AddX(v, offset)          v.frame = CGRectMake(v.frame.origin.x + offset, v.frame.origin.y, v.frame.size.width, v.frame.size.height)
-#define AddY(v, offset)          v.frame = CGRectMake(v.frame.origin.x, v.frame.origin.y + offset, v.frame.size.width, v.frame.size.height)
+#define SetX(v, x)               v = CGRectMake(x, v.origin.y, v.size.width, v.size.height)
+#define SetY(v, y)               v = CGRectMake(v.origin.x, y, v.size.width, v.size.height)
+#define SetWidth(v, w)           v = CGRectMake(v.origin.x, v.origin.y, w, v.size.height)
+#define SetHeight(v, h)          v = CGRectMake(v.origin.x, v.origin.y, v.size.width, h)
+#define SetOrigin(v, x, y)       v = CGRectMake(x, y, v.size.width, v.size.height)
+#define SetSize(v, w, h)         v = CGRectMake(v.origin.x, v.origin.y, w, h)
+#define SetFrame(v, x, y, w, h)  v = CGRectMake(x, y, w, h)
+#define AddX(v, offset)          v = CGRectMake(v.origin.x + offset, v.origin.y, v.size.width, v.size.height)
+#define AddY(v, offset)          v = CGRectMake(v.origin.x, v.origin.y + offset, v.size.width, v.size.height)
 
 #define X(v)                     v.frame.origin.x
 #define Y(v)                     v.frame.origin.y
