@@ -14,26 +14,26 @@
 
 @implementation AboutVC {
 
-  __weak IBOutlet NSImageView *_imgZOOM;
+    __weak IBOutlet NSImageView *_imgZOOM;
 }
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
-  // Do view setup here.
+    [super viewDidLoad];
+    // Do view setup here.
 }
 
 - (void)initWindowUI {
-  NSWindow *win = self.view.window;
-  NSButton *maximizeButton = [win standardWindowButton:NSWindowZoomButton];
-  [maximizeButton setEnabled:NO];
-  [win setTitle:@"About"];
-  win.backgroundColor = RGB(0x26, 0x26, 0x26);
-  win.styleMask &= ~NSWindowStyleMaskResizable;
+    NSWindow *win            = self.view.window;
+    NSButton *maximizeButton = [win standardWindowButton:NSWindowZoomButton];
+    [maximizeButton setEnabled:NO];
+    [win setTitle:@"About"];
+    win.backgroundColor = RGB(0x26, 0x26, 0x26);
+    win.styleMask &= ~NSWindowStyleMaskResizable;
 }
 
 - (void)viewWillAppear {
-  [super viewWillAppear];
+    [super viewWillAppear];
 
-  [self initWindowUI];
+    [self initWindowUI];
 }
 @end

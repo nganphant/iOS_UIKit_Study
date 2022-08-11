@@ -13,7 +13,7 @@ static NSString *S_CELL_ID = @"fileListCellID";
 @implementation FileListCell
 
 + (NSString *)CELL_ID {
-  return S_CELL_ID;
+    return S_CELL_ID;
 }
 
 @end

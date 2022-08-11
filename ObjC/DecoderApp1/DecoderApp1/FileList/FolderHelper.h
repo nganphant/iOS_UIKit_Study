@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FolderHelper : NSObject
 
-@property(readonly) NSURL *folderPath;
+@property (readonly) NSURL *folderPath;
 @property NSMutableArray<WavItem *> *files;
 
 - (instancetype)initWithFolderPath:(NSURL *)folderURL;
