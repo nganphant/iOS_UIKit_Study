@@ -9,6 +9,7 @@
 #import "Utility.h"
 #import "FileListCell.h"
 #import "FolderHelper.h"
+#import "AboutVC.h"
 
 @implementation ViewController{
     
@@ -80,6 +81,13 @@
         }
         
     }
+}
+
+- (IBAction)btnAbout_Click:(id)sender {
+    FUNC_LOG();
+    
+    AboutVC* about = [AboutVC new];
+    [self presentViewControllerAsModalWindow:about];
 }
 
 - (IBAction)btnGoUp_Click:(id)sender {
