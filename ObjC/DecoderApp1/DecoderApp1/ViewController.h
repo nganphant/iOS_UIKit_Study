@@ -7,8 +7,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController<NSTableViewDelegate, NSTableViewDataSource>
-
+@interface ViewController
+    : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
 @end
-

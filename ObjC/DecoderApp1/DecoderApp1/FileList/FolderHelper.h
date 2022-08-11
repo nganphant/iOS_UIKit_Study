@@ -13,23 +13,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FolderHelper : NSObject
 
-@property(readonly) NSURL* folderPath;
-@property NSMutableArray<WavItem*>* files;
+@property(readonly) NSURL *folderPath;
+@property NSMutableArray<WavItem *> *files;
 
-- (instancetype)initWithFolderPath:(NSURL*)folderURL;
+- (instancetype)initWithFolderPath:(NSURL *)folderURL;
 @end
-
 
 @interface WavItem : NSObject
 
 /// ex: ABC.wav
-@property NSString* fileName;
+@property NSString *fileName;
 
 /// wav icon
-@property NSImage* icon;
+@property NSImage *icon;
 
 /// ex: User/Document/ABC.wav
-@property NSString* fullPath;
+@property NSString *fullPath;
+
+@property BOOL isFolder;
 
 @end
 

@@ -8,12 +8,12 @@
 #import "FileListCell.h"
 
 // need to match with identify in Main storyboard
-static NSString* S_CELL_ID = @"fileListCellID";
+static NSString *S_CELL_ID = @"fileListCellID";
 
 @implementation FileListCell
 
-+ (NSString *)CELL_ID{
-    return S_CELL_ID;
++ (NSString *)CELL_ID {
+  return S_CELL_ID;
 }
 
 @end
