@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B1F06CC28A504D4005F6234 /* AngleViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F06CB28A504D4005F6234 /* AngleViewer.m */; };
+		4B1F06CF28A5094E005F6234 /* NSBezierPath+toCGPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F06CE28A5094E005F6234 /* NSBezierPath+toCGPath.m */; };
 		4B27482628A27E9A00FE417A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B27482528A27E9A00FE417A /* AppDelegate.m */; };
 		4B27482B28A27E9B00FE417A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B27482A28A27E9B00FE417A /* Assets.xcassets */; };
 		4B27483028A27E9C00FE417A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B27482F28A27E9C00FE417A /* main.m */; };
@@ -23,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B1F06CA28A504D4005F6234 /* AngleViewer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AngleViewer.h; sourceTree = "<group>"; };
+		4B1F06CB28A504D4005F6234 /* AngleViewer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AngleViewer.m; sourceTree = "<group>"; };
+		4B1F06CD28A5094E005F6234 /* NSBezierPath+toCGPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+toCGPath.h"; sourceTree = "<group>"; };
+		4B1F06CE28A5094E005F6234 /* NSBezierPath+toCGPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+toCGPath.m"; sourceTree = "<group>"; };
 		4B27482128A27E9A00FE417A /* DecoderApp1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecoderApp1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B27482428A27E9A00FE417A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4B27482528A27E9A00FE417A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,6 +111,10 @@
 			children = (
 				4B52162728A4EECF00E16D8A /* PathViewer.h */,
 				4B52162828A4EECF00E16D8A /* PathViewer.m */,
+				4B1F06CA28A504D4005F6234 /* AngleViewer.h */,
+				4B1F06CB28A504D4005F6234 /* AngleViewer.m */,
+				4B1F06CD28A5094E005F6234 /* NSBezierPath+toCGPath.h */,
+				4B1F06CE28A5094E005F6234 /* NSBezierPath+toCGPath.m */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -192,10 +202,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B52162928A4EECF00E16D8A /* PathViewer.m in Sources */,
+				4B1F06CC28A504D4005F6234 /* AngleViewer.m in Sources */,
 				4B52161E28A4C28500E16D8A /* AboutVC.m in Sources */,
 				4B342F1E28A3997200404E4E /* ViewController.m in Sources */,
 				4B27483928A2815300FE417A /* WindowController.m in Sources */,
 				4B27483C28A287D700FE417A /* Utility.m in Sources */,
+				4B1F06CF28A5094E005F6234 /* NSBezierPath+toCGPath.m in Sources */,
 				4B27483028A27E9C00FE417A /* main.m in Sources */,
 				4B27482628A27E9A00FE417A /* AppDelegate.m in Sources */,
 				4B5B00FF28A36DF300DE0C0B /* FolderHelper.m in Sources */,

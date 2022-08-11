@@ -127,6 +127,9 @@ NS_ASSUME_NONNULL_BEGIN
 // Format
 //////////////////////////////////////////////////////////////////
 
+
+#define DEG2RAD(deg) (deg * M_PI / 180.0f)
+
 //@interface DZUtility : NSObject
 //
 // void dail(NSString *strNum);
