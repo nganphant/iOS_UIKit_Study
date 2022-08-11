@@ -16,6 +16,8 @@
 		4B342F2128A3998300404E4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B342F1F28A3998300404E4E /* Main.storyboard */; };
 		4B52161E28A4C28500E16D8A /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B52161C28A4C28500E16D8A /* AboutVC.m */; };
 		4B52161F28A4C28500E16D8A /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B52161D28A4C28500E16D8A /* AboutVC.xib */; };
+		4B52162128A4E12F00E16D8A /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B52162028A4E12F00E16D8A /* Color.xcassets */; };
+		4B52162628A4E44E00E16D8A /* ScrollerExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B52162528A4E44E00E16D8A /* ScrollerExt.m */; };
 		4B5B00F928A356DB00DE0C0B /* FileListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B00F828A356DB00DE0C0B /* FileListCell.m */; };
 		4B5B00FF28A36DF300DE0C0B /* FolderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B00FE28A36DF300DE0C0B /* FolderHelper.m */; };
 /* End PBXBuildFile section */
@@ -37,6 +39,9 @@
 		4B52161B28A4C28500E16D8A /* AboutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutVC.h; sourceTree = "<group>"; };
 		4B52161C28A4C28500E16D8A /* AboutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutVC.m; sourceTree = "<group>"; };
 		4B52161D28A4C28500E16D8A /* AboutVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutVC.xib; sourceTree = "<group>"; };
+		4B52162028A4E12F00E16D8A /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		4B52162428A4E44E00E16D8A /* ScrollerExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollerExt.h; sourceTree = "<group>"; };
+		4B52162528A4E44E00E16D8A /* ScrollerExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollerExt.m; sourceTree = "<group>"; };
 		4B5B00F728A356DB00DE0C0B /* FileListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileListCell.h; sourceTree = "<group>"; };
 		4B5B00F828A356DB00DE0C0B /* FileListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileListCell.m; sourceTree = "<group>"; };
 		4B5B00FD28A36DF300DE0C0B /* FolderHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FolderHelper.h; sourceTree = "<group>"; };
@@ -73,13 +78,15 @@
 		4B27482328A27E9A00FE417A /* DecoderApp1 */ = {
 			isa = PBXGroup;
 			children = (
+				4B27482A28A27E9B00FE417A /* Assets.xcassets */,
+				4B52162028A4E12F00E16D8A /* Color.xcassets */,
+				4B52162328A4E42E00E16D8A /* Lib */,
 				4B342F1F28A3998300404E4E /* Main.storyboard */,
 				4B342F1C28A3997200404E4E /* ViewController.h */,
 				4B342F1D28A3997200404E4E /* ViewController.m */,
 				4B5B00F628A3568F00DE0C0B /* FileList */,
 				4B27482428A27E9A00FE417A /* AppDelegate.h */,
 				4B27482528A27E9A00FE417A /* AppDelegate.m */,
-				4B27482A28A27E9B00FE417A /* Assets.xcassets */,
 				4B27482F28A27E9C00FE417A /* main.m */,
 				4B27483128A27E9C00FE417A /* DecoderApp1.entitlements */,
 				4B27483728A2815300FE417A /* WindowController.h */,
@@ -91,6 +98,15 @@
 				4B52161D28A4C28500E16D8A /* AboutVC.xib */,
 			);
 			path = DecoderApp1;
+			sourceTree = "<group>";
+		};
+		4B52162328A4E42E00E16D8A /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				4B52162428A4E44E00E16D8A /* ScrollerExt.h */,
+				4B52162528A4E44E00E16D8A /* ScrollerExt.m */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 		4B5B00F628A3568F00DE0C0B /* FileList */ = {
@@ -162,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B27482B28A27E9B00FE417A /* Assets.xcassets in Resources */,
+				4B52162128A4E12F00E16D8A /* Color.xcassets in Resources */,
 				4B52161F28A4C28500E16D8A /* AboutVC.xib in Resources */,
 				4B342F2128A3998300404E4E /* Main.storyboard in Resources */,
 			);
@@ -175,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B52161E28A4C28500E16D8A /* AboutVC.m in Sources */,
+				4B52162628A4E44E00E16D8A /* ScrollerExt.m in Sources */,
 				4B342F1E28A3997200404E4E /* ViewController.m in Sources */,
 				4B27483928A2815300FE417A /* WindowController.m in Sources */,
 				4B27483C28A287D700FE417A /* Utility.m in Sources */,
@@ -323,6 +341,7 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -350,6 +369,7 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

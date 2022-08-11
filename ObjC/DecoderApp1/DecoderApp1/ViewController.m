@@ -33,6 +33,7 @@
     _tableFile.target     = self; // for double-click
     _tableFile.doubleAction = @selector(table_cell_double_click:);
 }
+
 - (void)viewDidLayout {
     [super viewDidLayout];
 }
@@ -58,6 +59,7 @@
     return cell;
 }
 
+/// table row double click
 - (void)table_cell_double_click:(id)sender {
     FUNC_LOG();
     
@@ -88,7 +90,7 @@
 }
 
 #pragma mark - UI EVENT
-
+/// click on textbox folder
 - (void)txtFolder_Click:(id)sender {
     FUNC_LOG();
 
@@ -111,6 +113,7 @@
     }
 }
 
+/// show about screen
 - (IBAction)btnAbout_Click:(id)sender {
     FUNC_LOG();
 
@@ -118,6 +121,7 @@
     [self presentViewControllerAsModalWindow:about];
 }
 
+/// move up to parent folder
 - (IBAction)btnGoUp_Click:(id)sender {
     FUNC_LOG();
 
@@ -144,6 +148,7 @@
 }
 
 #pragma mark - KEYBOARD EVENT
+/// handle enter key
 - (void)keyDown:(NSEvent *)event{
     FUNC_LOG();
     

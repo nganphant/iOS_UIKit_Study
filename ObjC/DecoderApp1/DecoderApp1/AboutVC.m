@@ -27,7 +27,7 @@
     NSButton *maximizeButton = [win standardWindowButton:NSWindowZoomButton];
     [maximizeButton setEnabled:NO];
     [win setTitle:@"About"];
-    win.backgroundColor = RGB(0x26, 0x26, 0x26);
+    win.backgroundColor = [NSColor colorNamed:@"AppBG"];
     win.styleMask &= ~NSWindowStyleMaskResizable;
 }
 
