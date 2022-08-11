@@ -14,6 +14,8 @@
 
 @implementation ViewController {
 
+    __weak IBOutlet NSTextField *_lblTimeTotal;
+    __weak IBOutlet NSTextField *_lblTimeCurrent;
     __weak IBOutlet NSView *_viewRightBG;
     __weak IBOutlet NSView *_viewLeftBG;
     __weak IBOutlet NSView *_viewPathBG;
@@ -42,6 +44,8 @@
     _btnExport.layer.backgroundColor=_viewPathBG.layer.backgroundColor;
     _btnExport.layer.cornerRadius=8;
     
+    _lblTimeCurrent.font = [NSFont monospacedDigitSystemFontOfSize:[NSFont systemFontSize] weight:NSFontWeightRegular];
+    _lblTimeTotal.font = _lblTimeCurrent.font;
     
     // For click on the folder text field
     NSClickGestureRecognizer *click = [[NSClickGestureRecognizer alloc] initWithTarget:self action:@selector(txtFolder_Click:)];

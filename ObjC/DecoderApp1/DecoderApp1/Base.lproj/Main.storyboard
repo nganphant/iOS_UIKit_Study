@@ -107,7 +107,7 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="841" height="545"/>
+                        <rect key="frame" x="0.0" y="0.0" width="841" height="532"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView horizontalCompressionResistancePriority="499" verticalCompressionResistancePriority="499" translatesAutoresizingMaskIntoConstraints="NO" id="dQm-TW-tns" userLabel="LeftBG">
@@ -246,7 +246,7 @@
                                         <rect key="frame" x="10" y="10" width="618" height="108"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UZF-X1-NO1">
-                                                <rect key="frame" x="85" y="16" width="115" height="16"/>
+                                                <rect key="frame" x="85" y="16" width="268" height="16"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="220419_001_RAW" id="M0X-g4-aEI">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -265,12 +265,12 @@
                                                 </buttonCell>
                                             </button>
                                             <button translatesAutoresizingMaskIntoConstraints="NO" id="7iJ-cw-gQ3">
-                                                <rect key="frame" x="308" y="8" width="37" height="32"/>
+                                                <rect key="frame" x="351" y="8" width="37" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="37" id="5hJ-f5-KgI"/>
                                                     <constraint firstAttribute="width" secondItem="7iJ-cw-gQ3" secondAttribute="height" multiplier="37:32" id="BeG-Nh-Udc"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="speaker_1" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="12g-WO-1IP">
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="speaker_3" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="12g-WO-1IP">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -283,17 +283,52 @@
                                                 </buttonCell>
                                                 <color key="contentTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </button>
+                                            <slider verticalHuggingPriority="750" horizontalCompressionResistancePriority="499" verticalCompressionResistancePriority="499" translatesAutoresizingMaskIntoConstraints="NO" id="i1u-1s-V06">
+                                                <rect key="frame" x="391" y="8" width="115" height="28"/>
+                                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="jn6-S4-S4j"/>
+                                            </slider>
+                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Fx-lR-R7r">
+                                                <rect key="frame" x="70" y="64" width="478" height="28"/>
+                                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="TZ8-FC-uc6"/>
+                                            </slider>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ti8-ix-NIB">
+                                                <rect key="frame" x="-2" y="72" width="61" height="16"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="00:00:00" id="0Tb-aP-ni2">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="N88-85-gHk">
+                                                <rect key="frame" x="559" y="72" width="61" height="16"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="00:00:00" id="90b-q4-sGn">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="UZF-X1-NO1" firstAttribute="leading" secondItem="WTE-v0-BaS" secondAttribute="trailing" constant="15" id="54S-my-aum"/>
+                                            <constraint firstItem="i1u-1s-V06" firstAttribute="centerY" secondItem="WR8-Nt-eCV" secondAttribute="centerY" id="5zX-l7-tcS"/>
+                                            <constraint firstItem="Ti8-ix-NIB" firstAttribute="leading" secondItem="WTE-v0-BaS" secondAttribute="leading" id="D79-GV-rI1"/>
                                             <constraint firstItem="WTE-v0-BaS" firstAttribute="leading" secondItem="H6P-AV-yk1" secondAttribute="leading" id="EGH-vm-flu"/>
                                             <constraint firstItem="WR8-Nt-eCV" firstAttribute="height" secondItem="WTE-v0-BaS" secondAttribute="height" id="IDu-VR-Q7e"/>
+                                            <constraint firstItem="N88-85-gHk" firstAttribute="bottom" secondItem="Ti8-ix-NIB" secondAttribute="bottom" id="Isc-Ec-m77"/>
+                                            <constraint firstItem="i1u-1s-V06" firstAttribute="width" secondItem="H6P-AV-yk1" secondAttribute="width" multiplier="0.18" id="KN2-HW-b9e"/>
+                                            <constraint firstItem="N88-85-gHk" firstAttribute="leading" secondItem="1Fx-lR-R7r" secondAttribute="trailing" constant="15" id="MRi-Vv-OLg"/>
                                             <constraint firstAttribute="bottom" secondItem="WR8-Nt-eCV" secondAttribute="bottom" id="Nga-gU-1Go"/>
+                                            <constraint firstItem="7iJ-cw-gQ3" firstAttribute="leading" secondItem="UZF-X1-NO1" secondAttribute="trailing" id="TFZ-2X-kOj"/>
                                             <constraint firstItem="7iJ-cw-gQ3" firstAttribute="centerY" secondItem="WTE-v0-BaS" secondAttribute="centerY" id="Xqw-Oz-5b5"/>
+                                            <constraint firstAttribute="trailing" secondItem="N88-85-gHk" secondAttribute="trailing" id="dNh-2Q-sxa"/>
+                                            <constraint firstItem="WTE-v0-BaS" firstAttribute="top" secondItem="Ti8-ix-NIB" secondAttribute="bottom" constant="24" id="isz-WK-bPf"/>
                                             <constraint firstItem="WR8-Nt-eCV" firstAttribute="width" secondItem="WTE-v0-BaS" secondAttribute="width" multiplier="1.3" id="pga-NM-Bm9"/>
-                                            <constraint firstAttribute="trailing" secondItem="7iJ-cw-gQ3" secondAttribute="trailing" constant="273" id="rGh-58-rVK"/>
+                                            <constraint firstItem="WR8-Nt-eCV" firstAttribute="leading" secondItem="i1u-1s-V06" secondAttribute="trailing" constant="20" id="qua-14-ISY"/>
+                                            <constraint firstItem="1Fx-lR-R7r" firstAttribute="leading" secondItem="Ti8-ix-NIB" secondAttribute="trailing" constant="15" id="rE7-Nd-bzT"/>
+                                            <constraint firstItem="i1u-1s-V06" firstAttribute="leading" secondItem="7iJ-cw-gQ3" secondAttribute="trailing" constant="5" id="rrR-vk-1g9"/>
                                             <constraint firstAttribute="bottom" secondItem="WTE-v0-BaS" secondAttribute="bottom" id="uCE-07-7QB"/>
                                             <constraint firstAttribute="trailing" secondItem="WR8-Nt-eCV" secondAttribute="trailing" id="vRU-Fg-ves"/>
+                                            <constraint firstItem="1Fx-lR-R7r" firstAttribute="centerY" secondItem="Ti8-ix-NIB" secondAttribute="centerY" id="wF6-aA-CvC"/>
                                             <constraint firstItem="UZF-X1-NO1" firstAttribute="centerY" secondItem="WTE-v0-BaS" secondAttribute="centerY" id="zbK-HO-Upr"/>
                                         </constraints>
                                     </customView>
@@ -319,6 +354,8 @@
                     </view>
                     <connections>
                         <outlet property="_btnExport" destination="WR8-Nt-eCV" id="b2t-gb-Tf0"/>
+                        <outlet property="_lblTimeCurrent" destination="Ti8-ix-NIB" id="HrK-Lu-uKB"/>
+                        <outlet property="_lblTimeTotal" destination="N88-85-gHk" id="g27-WS-mSq"/>
                         <outlet property="_tableFile" destination="Ngn-Ad-ert" id="nN6-Xn-S6x"/>
                         <outlet property="_viewLeftBG" destination="dQm-TW-tns" id="JWr-GJ-QRA"/>
                         <outlet property="_viewPathBG" destination="OhT-GL-L0x" id="pYK-gg-j30"/>
@@ -335,7 +372,7 @@
         <image name="NSColorPanel" width="32" height="32"/>
         <image name="arrow.up" catalog="system" width="13" height="14"/>
         <image name="play_play" width="72" height="48"/>
-        <image name="speaker_1" width="37" height="32"/>
+        <image name="speaker_3" width="37" height="32"/>
         <namedColor name="AppBGLight">
             <color red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
