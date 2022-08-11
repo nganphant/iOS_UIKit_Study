@@ -49,17 +49,14 @@
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    //    return [tableView makeViewWithIdentifier:@"abcd" owner:nil];
+ 
     FileListCell *cell    = [tableView makeViewWithIdentifier:FileListCell.CELL_ID owner:nil];
     WavItem      *wavItem = _folderHelper.files[row];
-//    NSLog(@"CREATE CELL");
+
     cell.lblFileName.stringValue = wavItem.fileName;
     cell.imgFileIcon.image       = wavItem.icon;
     return cell;
 }
-//- (void)tableViewSelectionDidChange:(NSNotification *)notification {
-//    FUNC_LOG();
-//}
 
 - (void)table_cell_double_click:(id)sender {
     FUNC_LOG();
@@ -144,6 +141,18 @@
     }
 
     [self openFolder:[[NSURL alloc] initFileURLWithPath:parentFolder]];
+}
+
+#pragma mark - KEYBOARD EVENT
+- (void)keyDown:(NSEvent *)event{
+    FUNC_LOG();
+    
+    unichar ch = [[event charactersIgnoringModifiers] characterAtIndex:0];
+    if (ch != 13) {
+        return;
+    }
+    
+    [self table_cell_double_click:nil];
 }
 
 #pragma mark - HELPER FUNC
