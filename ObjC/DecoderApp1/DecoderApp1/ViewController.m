@@ -10,28 +10,53 @@
 #import "FileListCell.h"
 #import "FolderHelper.h"
 #import "Utility.h"
+#import "PathViewer.h"
 
 @implementation ViewController {
 
+    __weak IBOutlet NSView *_viewRightBG;
+    __weak IBOutlet NSView *_viewLeftBG;
+    __weak IBOutlet NSView *_viewPathBG;
+    __weak IBOutlet PathViewer *_viewPathViewer;
     __weak IBOutlet NSTableView *_tableFile;
-    __weak IBOutlet NSTextField *_txtFolderPath;
-    __weak IBOutlet NSButton    *_btnFolderUp;
-
+    __weak IBOutlet NSButton *_btnExport;
+    
     FolderHelper *_folderHelper;
 }
 
 #pragma mark - LIFE CYCLE
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
+- (void)initUI {
+    _viewPathBG.wantsLayer=YES;
+    _viewPathBG.layer.backgroundColor=[NSColor colorNamed:@"ControlColor"].CGColor;
+    _viewPathBG.layer.cornerRadius=3;
+    
+    _viewLeftBG.wantsLayer=YES;
+    _viewLeftBG.layer.backgroundColor = [NSColor colorNamed:@"AppBGLight"].CGColor;
+    _viewLeftBG.layer.cornerRadius=2;
+    
+    _viewRightBG.wantsLayer=YES;
+    _viewRightBG.layer.backgroundColor = _viewLeftBG.layer.backgroundColor;
+    _viewRightBG.layer.cornerRadius=_viewLeftBG.layer.cornerRadius;
+    
+    _btnExport.wantsLayer = YES;
+    _btnExport.layer.backgroundColor=_viewPathBG.layer.backgroundColor;
+    _btnExport.layer.cornerRadius=8;
+    
+    
     // For click on the folder text field
     NSClickGestureRecognizer *click = [[NSClickGestureRecognizer alloc] initWithTarget:self action:@selector(txtFolder_Click:)];
-    [_txtFolderPath addGestureRecognizer:click];
-
+    [_viewPathViewer addGestureRecognizer:click];
+    
     _tableFile.dataSource = self;
     _tableFile.delegate   = self;
     _tableFile.target     = self; // for double-click
     _tableFile.doubleAction = @selector(table_cell_double_click:);
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    [self initUI];
 }
 
 - (void)viewDidLayout {
@@ -166,9 +191,7 @@
     NSString *path = result.path;
     NSLog(@"open folder: %@", path);
 
-    _txtFolderPath.stringValue = path;
-    [[_txtFolderPath currentEditor] moveToEndOfLine:nil];
-
+    _viewPathViewer.text = path;
     _folderHelper = [[FolderHelper alloc] initWithFolderPath:result];
 
     NSLog(@"START RELOAD");

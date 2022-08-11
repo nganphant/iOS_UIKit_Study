@@ -1,5 +1,5 @@
 //
-//  ScrollerExt.h
+//  PathViewer.h
 //  DecoderApp1
 //
 //  Created by ngan on 2022/08/11.
@@ -9,8 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ScrollerExt : NSScroller
+@interface PathViewer : NSView
 
+@property(nonatomic) NSString* text;
 @end
 
 NS_ASSUME_NONNULL_END

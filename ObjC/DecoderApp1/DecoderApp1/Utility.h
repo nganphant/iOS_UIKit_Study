@@ -114,6 +114,8 @@ NS_ASSUME_NONNULL_BEGIN
 #define Origin(v) v.frame.origin
 #define Size(v)   v.frame.size
 
+#define FLIP_Y(yPos, objHeight, parentHeight) (parentHeight - objHeight - yPos)
+
 //////////////////////////////////////////////////////////////////
 // Color
 //////////////////////////////////////////////////////////////////
